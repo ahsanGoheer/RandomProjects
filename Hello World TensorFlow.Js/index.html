@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Hello World</title>
+        <link  rel="stylesheet" href="base.css">
+        <!-- Add js before body -->
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script> 
+      
+    </head>
+    <body>
+        <div id="main-heading">
+            <h1>Simple one layer one neuron network.</h1>
+        </div>
+        <div id="model-stats">
+            <h2>Model Summary</h2>
+            <div id="summary">
+            </div>
+            <h2>Input Training Data</h2>
+            <div id="data-entry">
+                <label for="xValues">Enter the values of X: </label>
+                <input  type="text" name="xValues" id="xValBox" class="inputBox" placeholder="Enter Comma Seperated Values for eg: 2,3,4..">
+                <button class="btn" onClick="computeY()">Submit Data</button>
+                <h3 id="yValListHeading">Values of Y</h3>
+                <ul id="yValList">
+                </ul>
+                <small>*The equation applied is : Y=2x-1</small>
+            </div>
+            <h2>Training</h3>
+            <div id="training">
+                <label for="predData">Enter Prediction Values:</label>
+                <input type="text" name="predData" id="predBox" class="inputBox" placeholder="Enter Comma Seperated Values for eg: 2,3,4..">
+                <button onClick='StartTraining()' class="btn">Train</button>
+                <div id="progress">
+
+                <div>
+            </div>
+        </div>
+        <script src="./app.js"></script>
+    </body>
+</html>
